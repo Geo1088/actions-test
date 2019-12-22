@@ -11,5 +11,5 @@ jobs:
     steps:
       - run: |
           echo $GITHUB_REF
-          TAG_NAME="${GITHUB_REF#ref/tags/}"
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
           echo $TAG_NAME
