@@ -1,0 +1,15 @@
+name: Thing to run on tags
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo $GITHUB_REF
+          TAG_NAME="${GITHUB_REF#ref/tags/}"
+          echo $TAG_NAME
